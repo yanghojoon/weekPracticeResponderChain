@@ -8,12 +8,14 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var greenView: GreenView!
+    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let greenViewGestureRecognizer = UITapGestureRecognizer.init(target: greenView, action: #selector(greenView.changeViewColor))
+        view.addGestureRecognizer(greenViewGestureRecognizer)
     }
-
-
 }
 
